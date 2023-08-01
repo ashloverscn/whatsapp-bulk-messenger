@@ -7,6 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
+from random import randint
+from numpy import random
 from urllib.parse import quote
 import os
 
@@ -88,7 +90,10 @@ for idx, number in enumerate(numbers):
 					sleep(1)
 					click_btn.click()
 					sent=True
-					sleep(3)
+					rdelay = randint(1,7)
+					#rdelay = random.uniform(2, 4)
+					print(rdelay)
+					sleep(rdelay)
 					print(style.GREEN + 'Message sent to: ' + number + style.RESET)
 	except Exception as e:
 		print(style.RED + 'Failed to send message to ' + number + str(e) + style.RESET)
