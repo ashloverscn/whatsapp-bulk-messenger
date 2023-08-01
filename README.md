@@ -11,6 +11,11 @@ Note: Another version of similar project is available which supports sending med
 *  Python >= 3.6
 *  Chrome headless is installed by the program automatically
 
+#### To manually accuire chromedriver binary follow the links below
+https://googlechromelabs.github.io/chrome-for-testing/#stable
+
+https://pypi.org/project/chromedriver-py/
+
 # Setup
 
 1. Install python - >=v3.6
