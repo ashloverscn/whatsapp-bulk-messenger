@@ -1,4 +1,6 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from chromedriver_py import binary_path
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -58,7 +60,10 @@ total_number=len(numbers)
 print(style.RED + 'We found ' + str(total_number) + ' numbers in the file' + style.RESET)
 delay = 30
 
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+#driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+#driver = webdriver.Chrome(executable_path=binary_path)
+driver = webdriver.Chrome()
+
 print('Once your browser opens up sign in to web whatsapp')
 driver.get('https://web.whatsapp.com')
 input(style.MAGENTA + "AFTER logging into Whatsapp Web is complete and your chats are visible, press ENTER..." + style.RESET)
